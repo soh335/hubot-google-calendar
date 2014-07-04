@@ -1,6 +1,6 @@
 {
   "name": "hubot-google-calendar",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "hubot scripts for accesing google calendar",
   "main": "index.coffee",
   "scripts": {
