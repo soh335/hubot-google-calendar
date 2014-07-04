@@ -58,21 +58,22 @@ module.exports = (robot) ->
         timeMax = new Date()
         timeMax.setHours(23, 59, 59)
         for i, item of data.items
-          request(
-            {
-              url: "https://www.googleapis.com/calendar/v3/calendars/#{item.id}/events"
-              qs:
-                timeMin: timeMin.toISOString()
-                timeMax: timeMax.toISOString()
-                orderBy: 'startTime'
-                singleEvents: true
-            }
-            (data) ->
-              strs = [item.id]
-              for i, item of data.items
-                strs.push(formatEvent(item))
-              msg.send strs.join("\n")
-            onError
-          )
+          do(item) ->
+            request(
+              {
+                url: "https://www.googleapis.com/calendar/v3/calendars/#{item.id}/events"
+                qs:
+                  timeMin: timeMin.toISOString()
+                  timeMax: timeMax.toISOString()
+                  orderBy: 'startTime'
+                  singleEvents: true
+              }
+              (data) ->
+                strs = [item.id]
+                for i, item of data.items
+                  strs.push(formatEvent(item))
+                msg.send strs.join("\n")
+              onError
+            )
       onError
     )
