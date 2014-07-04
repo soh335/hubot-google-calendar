@@ -27,21 +27,22 @@ request = (opt, onSuccess, onError) ->
   )
 
 formatEvent = (event) ->
-  str = ""
+  strs = []
   if event.start
     if event.start.date
-      str += event.start.date
+      strs.push(event.start.date)
     else if event.start.dateTime
-      str += event.start.dateTime
+      strs.push(event.start.dateTime)
 
   if event.end
-    str += " ~ "
+    strs.push("~")
     if event.end.date
-      str += event.end.date
+      strs.push(event.end.date)
     else if event.end.dateTime
-      str += event.end.dateTime
+      strs.push(event.end.dateTime)
 
-  str += " #{event.summary}"
+  strs.push(event.summary)
+  strs.join(" ")
 
 module.exports = (robot) ->
 
