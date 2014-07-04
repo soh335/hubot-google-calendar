@@ -58,7 +58,7 @@ module.exports = (robot) ->
         timeMax = new Date()
         timeMax.setHours(23, 59, 59)
         for i, item of data.items
-          do(item) ->
+          do (item) ->
             request(
               {
                 url: "https://www.googleapis.com/calendar/v3/calendars/#{item.id}/events"
