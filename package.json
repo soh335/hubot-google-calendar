@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/soh335/hubot-google-calendar/issues"
   },
-  "homepage": "https://github.com/soh335/hubot-google-calendar"
+  "homepage": "https://github.com/soh335/hubot-google-calendar",
   "dependencies": {
     "underscore": ">= 1.6.0",
     "google-oauth-jwt": ">= 0.1.4"
