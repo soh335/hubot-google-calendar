@@ -1,9 +1,15 @@
 # hubot-google-calendar
 
-hubot-google-calendar authorized by google service account
+hubot scripts for accesing google calendar
+
+## configuration
+
+hubot-google-calendar authorized by google service account. So check these steps for creating it.
 
 * https://developers.google.com/accounts/docs/OAuth2ServiceAccount?hl=ja
 * https://github.com/extrabacon/google-oauth-jwt#creating-a-service-account-using-the-google-developers-console
+
+And service account is created, allow to access your google caelndar form service account.
 
 ## enviroment variable
 
@@ -11,10 +17,6 @@ hubot-google-calendar authorized by google service account
     * email of google service account
 * HUBOT_GOOGLE_CALENDAR_KEYFILE
     * keyfile of google service account
-
-## configuration
-
-allow to access google caelndar form service account.
 
 ## usage
 
