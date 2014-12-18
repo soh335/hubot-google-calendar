@@ -22,6 +22,7 @@
   "homepage": "https://github.com/soh335/hubot-google-calendar",
   "dependencies": {
     "underscore": ">= 1.6.0",
-    "google-oauth-jwt": ">= 0.1.4"
+    "google-oauth-jwt": ">= 0.1.4",
+    "moment-timezone": ">= 0.2.5"
   }
 }

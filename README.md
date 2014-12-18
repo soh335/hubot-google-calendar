@@ -20,13 +20,24 @@ And service account is created, allow to access your google caelndar form servic
 
 ## usage
 
-### events
+### hubot calndar
 
 show today events.
 
 ```
-Hubot> Hubot: events
+Hubot> Hubot: calendar
 Hubot> name@eample.com
 2014-01-01 ~ 2014-01-02 foo
 2014-01-01T00:00:00+09:00 ~ 2014-01-02T01:00:00+09:00 bar
+```
+
+### hubot calndar (today|tomorrow)
+
+show today or tomorrow events.
+
+```
+Hubot> Hubot: calndar tomorrow
+Hubot> name@eample.com
+2014-01-02 ~ 2014-01-03 foo
+2014-01-02T00:00:00+09:00 ~ 2014-01-03T01:00:00+09:00 bar
 ```
